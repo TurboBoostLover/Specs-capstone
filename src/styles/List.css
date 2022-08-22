@@ -1,0 +1,22 @@
+.car {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    justify-content: space-around;
+    border: 4px;
+    border-color: red;
+    border-style: solid;
+}
+
+
+.contain {
+    width: 60vw;
+    margin: auto;
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+    
+}
+
+
