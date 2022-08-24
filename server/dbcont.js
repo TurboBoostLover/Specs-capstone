@@ -2,7 +2,9 @@ const sequelize = require("./sequelize.js");
 
 module.exports = {
   seed: (req, res) => {
-    sequelize.query(`
+    sequelize
+      .query(
+        `
     DROP TABLE IF EXISTS people;
     DROP TABLE IF EXISTS hotwheels;
 
@@ -29,52 +31,90 @@ VALUES ('natew', 'asdf');
 INSERT INTO hotwheels (user_id, name, type, year, color, quantity)
 VALUES (1, 'Corvette', 'American', 2022, 'Blue', 4);
 
-   `).then(() => {
-            console.log('DB seeded!')
-            res.sendStatus(200)
-        }).catch(err => console.log('error seeding DB', err))
+   `
+      )
+      .then(() => {
+        console.log("DB seeded!");
+        res.sendStatus(200);
+      })
+      .catch((err) => console.log("error seeding DB", err));
   },
 
   createNewHotWheels: (req, res) => {
-    const {user_id, name, type, year, color, quantity} = req.body;
-    sequelize.query( `
+    const { user_id, name, type, year, color, quantity } = req.body;
+    sequelize
+      .query(
+        `
       INSERT INTO hotwheels (user_id, name, type, year, color, quantity)
       VALUES (${user_id}, '${name}', '${type}', ${year}, '${color}', ${quantity})
-    `).then(() => {
-      alert('successfully added car')
-      res.sendStatus(200)
-    }).catch(err => console.log(err))
+    `
+      )
+      .then(() => {
+        res.sendStatus(200);
+      })
+      .catch((err) => console.log(err));
   },
 
   getPeople: (req, res) => {
-    sequelize.query(`
+    sequelize
+      .query(
+        `
     SELECT * FROM people
-    `)
-    .then ((dbRes) => {
-      res.status(200).send(dbRes)
-    }).catch(err => console.log(err))
+    `
+      )
+      .then((dbRes) => {
+        res.status(200).send(dbRes);
+      })
+      .catch((err) => console.log(err));
   },
 
   list: (req, res) => {
-    const {guy} = req.query
-    sequelize.query(`
+    const { guy } = req.query;
+    sequelize
+      .query(
+        `
     SELECT * FROM hotwheels
     WHERE user_id='${guy}';
-    `)
-    .then ((dbRes) => {
-      res.status(200).send(dbRes)
-    }).catch(err => console.log(err))
+    `
+      )
+      .then((dbRes) => {
+        res.status(200).send(dbRes);
+      })
+      .catch((err) => console.log(err));
   },
 
   signUp: (req, res) => {
-    const {username, password} = req.body;
-    sequelize.query(`
-    INSERT INTO people (username, password)
-VALUES ('${username}', '${password}');
-    `).then(() => {
-      alert('successfully signed up')
-      res.sendStatus(200)
-    }).catch(err => console.log(err))
-  }
+    const { username, password } = req.body;
+  
+    sequelize.query(`SELECT * FROM people WHERE username = '${username}'`)
+    .then((dbRes) => {
+      if (dbRes[0].length === 0) {
+      sequelize.query(
+        `INSERT INTO people (username, password)
+          VALUES ('${username}', '${password}');`
+      ).then(() => {
+        res.sendStatus(200);
+      })
+      .catch((err) => console.log(err));
+      } else {
+      res.sendStatus(500);
+      return
+      }
+    })
+  },
 
+  bye: (req, res) => {
+    const id = req.params.id;
+    sequelize
+      .query(
+        `
+    DELETE FROM hotwheels
+    WHERE car_id=${id};
+    `
+      )
+      .then(() => {
+        res.sendStatus(200);
+      })
+      .catch((err) => console.log(err));
+  },
 };

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
-import axios from 'axios'
+import axios from "axios";
 
 import "../styles/Login.css";
 
@@ -11,18 +10,16 @@ function Login() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   // User Login info
-  let database = []
-  axios.get('http://localhost:6900/welcome')
-  .then(res => {
-     database = res.data[0]
+  let database = [];
+  axios.get("http://localhost:6900/welcome").then((res) => {
+    database = res.data[0];
     //window session storage for user_id
 
-
-     return database
+    return database;
   });
   const errors = {
     uname: "invalid username",
-    pass: "invalid password"
+    pass: "invalid password",
   };
 
   const handleSubmit = (event) => {
@@ -41,8 +38,8 @@ function Login() {
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
         setIsSubmitted(true);
-         let guy = userData.user_id
-        window.sessionStorage.setItem("user", guy)
+        let guy = userData.user_id;
+        window.sessionStorage.setItem("user", guy);
       }
     } else {
       // Username not found
@@ -77,13 +74,25 @@ function Login() {
     </div>
   );
 
-
   return (
     <div className="app">
       <div className="login-form">
         <div className="title">Sign In</div>
-        {isSubmitted ? <div>User is successfully logged in <Link to="/home">Click to Continue</Link></div> : renderForm}
-        <div className="sign_up"><Link to="/signup">Sign up</Link> </div>
+        {isSubmitted ? (
+          <div>
+            User is successfully logged in{" "}
+            <Link to="/home">Click to Continue</Link>
+          </div>
+        ) : (
+          renderForm
+        )}
+        {!isSubmitted ? (
+          <div className="sign_up">
+            <Link to="/signup">Sign up</Link>{" "}
+          </div>
+        ) : (
+          !renderForm
+        )}
       </div>
     </div>
   );

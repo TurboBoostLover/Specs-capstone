@@ -3,10 +3,12 @@
     align-items: center;
     text-align: center;
     padding: 5px;
-    justify-content: space-around;
+    justify-content:space-between;
     border: 4px;
     border-color: red;
     border-style: solid;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
@@ -16,7 +18,17 @@
     margin-top: 50px;
     background-color: black;
     color: white;
-    
+    margin-top: 25px;
 }
 
-
+.loading {
+    display: flex;
+    font-size: xx-large;
+    background-image: url("https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif");
+    background-repeat: no-repeat;
+    justify-content: center;
+    height: 300px;
+    background-position:center;
+    /* height: 100vh;
+    width: 100vw; */
+}

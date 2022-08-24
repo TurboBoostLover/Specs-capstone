@@ -1,7 +1,8 @@
 import { Route, Switch, Redirect } from "react-router-dom";
 import Welcome from "./screens/Welcome";
-import Home from "./screens/Home"
+import Home from "./screens/Home";
 import Signup from "./screens/Signup";
+import Game from "./screens/Game";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path="/signup" exact>
             <Signup />
+          </Route>
+          <Route path="/game" exact>
+            <Game />
           </Route>
         </Switch>
       </main>

@@ -19,3 +19,17 @@
     font-size: larger;
     border-radius: 45%;
 }
+
+.gamefoot {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    justify-content: space-evenly;
+    border: 4px;
+    border-color: purple;
+    border-style: solid;
+    font-size: larger;
+    border-radius: 45%;
+    margin-left: 15%;
+}

@@ -1,6 +1,6 @@
 import { Route } from "react-router-dom";
 import Signups from "../components/Signup";
-import './Landing.css'
+import "../styles/Landing.css";
 
 const Signup = () => {
   return (
