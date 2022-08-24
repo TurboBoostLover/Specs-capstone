@@ -50,7 +50,7 @@ const NewHotWheels = () => {
   };
   return (
     <div className="main-div">
-      <div className="box">
+      <div className="box1">
         <h2 className="titleCar">Enter New Car</h2>
         <form className="inputForm" onSubmit={submitHandler}>
           <input onChange={setStateName} placeholder="Name?" type="text" />
@@ -62,7 +62,7 @@ const NewHotWheels = () => {
             placeholder="How many?"
             type="number"
           />
-          <button value="Submit" type="submit">
+          <button value="Submit" type="submit" className="pushit">
             Submit
           </button>
         </form>

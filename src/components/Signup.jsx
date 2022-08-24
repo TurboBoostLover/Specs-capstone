@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "../styles/Signup.css"
 
 const Signup = () => {
   let [username, setUsername] = useState("");
@@ -27,7 +28,8 @@ const Signup = () => {
   };
 
   return (
-    <div className="main-div">
+    <div className="app2">
+    <div className="main-div6">
       <div className="box">
         <h2>Sign up</h2>
         <form className="signup" onSubmit={submitHandler}>
@@ -35,21 +37,24 @@ const Signup = () => {
             onChange={setStateUsername}
             placeholder="Username?"
             type="text"
+            className="h1234"
           />
           <input
             onChange={setStatePassword}
             placeholder="Password?"
             type="password"
+            className="h1234"
           />
-          <button value="Submit" type="submit">
+          <button value="Submit" type="submit" className="h12345">
             Submit
           </button>
         </form>
       </div>
-      <Link to="/">
+      <Link to="/" className="h4">
         {" "}
-        <h3>Go to Login Page</h3>
+        <h4>Go to Login Page</h4>
       </Link>
+    </div>
     </div>
   );
 };

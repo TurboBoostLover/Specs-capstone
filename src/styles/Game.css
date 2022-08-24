@@ -1,19 +1,11 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  } */
-  
-  /* body {
-    display: flex;
-    margin-top: calc(100vh / 4);
-    justify-content: center;
-  } */
-  
+
   .App {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background-color: lightslategray;
+    height: 100vh;
+    
   }
   
   .startGame {

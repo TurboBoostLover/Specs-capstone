@@ -46,7 +46,11 @@
     gap: 20px;
     height: 95vh;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    background-color: #f8f9fd;
+    background-image: url('https://wallpaperaccess.com/full/2939813.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 10%;
+    height: 90vh;
   }
   
   input[type="text"],

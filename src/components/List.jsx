@@ -87,11 +87,11 @@ const List = () => {
             return (
               <div key={carList.car_id} className={"car"}>
                 <button onClick={() => bye(carList.car_id)}>X</button>
-                <h3>Name: {carList.name}</h3>
-                <h3>Type: {carList.type}</h3>
-                <h3>Year: {carList.year}</h3>
-                <h3>Color: {carList.color}</h3>
-                <h3>Quantity: {carList.quantity}</h3>
+                <h3 className="divide">Name: {carList.name}</h3>
+                <h3 className="divide">Type: {carList.type}</h3>
+                <h3 className="divide">Year: {carList.year}</h3>
+                <h3 className="divide">Color: {carList.color}</h3>
+                <h3 className="divide">Quantity: {carList.quantity}</h3>
               </div>
             );
           })}

@@ -3,7 +3,7 @@
     align-items: center;
     text-align: center;
     padding: 5px;
-    justify-content:space-between;
+    justify-content:space-evenly;
     border: 4px;
     border-color: red;
     border-style: solid;
@@ -13,7 +13,7 @@
 
 
 .contain {
-    width: 60vw;
+    width: 70vw;
     margin: auto;
     margin-top: 50px;
     background-color: black;
@@ -29,6 +29,8 @@
     justify-content: center;
     height: 300px;
     background-position:center;
-    /* height: 100vh;
-    width: 100vw; */
+}
+
+.divide {
+    width: 20%;
 }
