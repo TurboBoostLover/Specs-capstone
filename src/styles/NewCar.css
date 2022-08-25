@@ -35,6 +35,15 @@ h2 {
 .titleCar {
   font-size: xx-large;
   color: aqua;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 5px #fff,
+    0 0 5px #fff,
+    0 0 5px #0fa,
+    0 0 5px #0fa,
+    0 0 5px #0fa,
+    0 0 5px #0fa,
+    0 0 5px #0fa;
 }
 
 .pushit {

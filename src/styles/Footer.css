@@ -14,10 +14,9 @@
   padding: 15px;
   justify-content: space-evenly;
   border: 4px;
-  border-color: red;
   border-style: solid;
   font-size: larger;
-  border-radius: 45%;
+  border-radius: 10px;
   animation: color-change 1s infinite;
 }
 
@@ -28,12 +27,12 @@
   padding: 15px;
   justify-content: space-evenly;
   border: 4px;
-  border-color: red;
   border-style: solid;
   font-size: larger;
-  border-radius: 45%;
+  border-radius: 10px;
   margin-left: 15%;
   animation: color-change 1s infinite;
+
 }
 
 .footwish {
@@ -43,10 +42,9 @@
   padding: 15px;
   justify-content: space-evenly;
   border: 4px;
-  border-color: red;
   border-style: solid;
   font-size: larger;
-  border-radius: 45%;
+  border-radius: 10px;
   margin-left: 15%;
   animation: color-change 1s infinite;
 }
@@ -58,10 +56,9 @@
   padding: 15px;
   justify-content: space-evenly;
   border: 4px;
-  border-color: red;
   border-style: solid;
   font-size: larger;
-  border-radius: 45%;
+  border-radius: 10px;
   margin-left: 15%;
   animation: color-change 1s infinite;
 }
