@@ -5,9 +5,9 @@ import NewWish from "../components/NewWish";
 const WishList = () => {
   return (
     <div className="wishList">
+      <Footer />
       <NewWish />
       <WishLists />
-      <Footer />
     </div>
   );
 };

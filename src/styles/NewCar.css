@@ -37,33 +37,32 @@ h2 {
   color: aqua;
   text-shadow:
     0 0 5px #fff,
-    0 0 5px #fff,
-    0 0 5px #fff,
+    0 0 5px #ff0000,
+    0 0 5px #ff0000,
     0 0 5px #0fa,
     0 0 5px #0fa,
     0 0 5px #0fa,
     0 0 5px #0fa,
     0 0 5px #0fa;
+    letter-spacing: 2px;
 }
 
 .pushit {
   width: 80%;
   height: 40px;
   animation: color-change 1s infinite;
+  letter-spacing: 2px;
 }
 
 @keyframes color-change {
   0% {
     color: red;
   }
-  33% {
-    color: yellow;
-  }
-  66% {
-    color: orange;
+  50% {
+    color: blue;
   }
   100% {
-    color: blue;
+    color: red;
   }
 }
 

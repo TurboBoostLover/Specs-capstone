@@ -73,12 +73,6 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    margin-top: calc(100vh / 6);
-  }
-}
-
 .home {
   border-style: solid;
   width: min-content;
