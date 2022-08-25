@@ -10,5 +10,5 @@ My MVP:
  After MVP 
  - User can search through by year :Done
  - User can search through by type (lowrider, jdm, american, European) :Done
- - User Can add a wishlist of cars they wish to get
+ - User Can add a wishlist of cars they wish to get :Done
  
