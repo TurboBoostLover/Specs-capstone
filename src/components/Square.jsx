@@ -1,5 +1,5 @@
-import React from 'react';
-import '../styles/Square.css';
+import React from "react";
+import "../styles/Square.css";
 
 export const Square = ({ value, onClick }) => {
   return (

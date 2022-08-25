@@ -11,6 +11,12 @@ const Footer = () => {
       <Link to="/game" className="gamefoot">
         Game
       </Link>
+      <Link to="/wishlist" className="footwish">
+        Wish List
+      </Link>
+      <Link to="/home" className="foothome">
+        Home
+      </Link>
     </div>
   );
 };

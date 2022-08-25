@@ -10,6 +10,9 @@ const {
   list,
   signUp,
   bye,
+  wishlist,
+  byewish,
+  createNewWish,
 } = require("./dbcont.js");
 
 app.use(express());
@@ -24,6 +27,9 @@ app.get("/welcome", getPeople);
 app.get("/list", list);
 app.post("/signup", signUp);
 app.delete("/list/:id", bye);
+app.get("/wishlist", wishlist)
+app.delete("/wishlist/:id", byewish);
+app.post("/newwish", createNewWish);
 
 //
 app.listen(port, () => {

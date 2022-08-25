@@ -1,5 +1,5 @@
-.homescreen {
-	background-image: url('https://static.vecteezy.com/system/resources/previews/004/811/279/original/fire-background-image-illustration-with-fire-flame-illustration-and-copy-space-area-suitable-to-place-on-content-with-that-theme-vector.jpg');
-	background-repeat:no-repeat;
-	background-size: 100% 100%;
+.homescreen, .wishList {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/004/811/279/original/fire-background-image-illustration-with-fire-flame-illustration-and-copy-space-area-suitable-to-place-on-content-with-that-theme-vector.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }

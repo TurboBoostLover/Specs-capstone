@@ -1,36 +1,36 @@
 .car {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 5px;
-    justify-content:space-evenly;
-    border: 4px;
-    border-color: red;
-    border-style: solid;
-    padding-left: 20px;
-    padding-right: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  justify-content: space-evenly;
+  border: 4px;
+  border-bottom: 2px;
+  border-color: aqua;
+  border-style: solid;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-
 .contain {
-    width: 70vw;
-    margin: auto;
-    margin-top: 50px;
-    background-color: black;
-    color: white;
-    margin-top: 25px;
+  width: 70vw;
+  margin: auto;
+  margin-top: 50px;
+  background-color: rgb(2, 81, 87);
+  color: white;
+  margin-top: 25px;
 }
 
 .loading {
-    display: flex;
-    font-size: xx-large;
-    background-image: url("https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif");
-    background-repeat: no-repeat;
-    justify-content: center;
-    height: 300px;
-    background-position:center;
+  display: flex;
+  font-size: xx-large;
+  background-image: url("https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif");
+  background-repeat: no-repeat;
+  justify-content: center;
+  height: 300px;
+  background-position: center;
 }
 
 .divide {
-    width: 20%;
+  width: 20%;
 }

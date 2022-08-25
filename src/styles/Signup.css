@@ -1,62 +1,66 @@
 .h4 {
-    display: flex;
-    margin-left: 50px;
-    color: black;
-    border-style: solid;
-    font-size: x-large;
-    background-color: white;
-    border-radius: 15px;
-    padding: 5px;
+  display: flex;
+  margin-left: 50px;
+  color: black;
+  border-style: solid;
+  font-size: x-large;
+  background-color: white;
+  border-radius: 15px;
+  padding: 5px;
+  animation: color-change 1s infinite;
 }
 
 .h1234 {
-padding: 5px;
-margin: 5px;
-
+  padding: 5px;
+  margin: 5px;
 }
 
 .box {
-    background-color: aqua;
-    padding-right: 22px;
-    height: 20vh;
-    border-radius: 15px;
+  background: linear-gradient(red, orange);
+  padding-right: 22px;
+  height: 20vh;
+  border-radius: 15px;
 }
 
 .h12345 {
-    margin-top: 8%;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    justify-content: center;
-    height: 40px;
-    justify-self: center;
-    align-items: center;
-    color: red;
-    background-color: black;
-    font-size: larger;
+  margin-top: 8%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  justify-content: center;
+  height: 40px;
+  justify-self: center;
+  align-items: center;
+  color: red;
+  background-color: black;
+  font-size: larger;
 }
 
 .app2 {
-    font-family: sans-serif;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    flex-direction: column;
-    gap: 20px;
-    height: 95vh;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    background-image: url('https://i.pinimg.com/originals/f8/24/02/f82402f4fcf70c4b12e3af6d65959a6f.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0 10%;
-    height: 90vh;
-  }
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  gap: 20px;
+  height: 95vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-image: url("https://i.pinimg.com/originals/f8/24/02/f82402f4fcf70c4b12e3af6d65959a6f.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 10%;
+  height: 90vh;
+}
 
-  .main-div6 {
-    margin-top: 10%;
-    margin-right: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.main-div6 {
+  margin-top: 10%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxh2 {
+  color: white;
+}

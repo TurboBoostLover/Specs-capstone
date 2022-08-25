@@ -3,15 +3,15 @@ import axios from "axios";
 import "../styles/List.css";
 import "../styles/Search.css";
 
-const List = () => {
-  const [typeTerm, setTypeTerm] = useState("");
+const WishLists = () => {
+  const [priceTerm, setPriceTerm] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [yearTerm, setYearTerm] = useState("");
   const [isLoading, setLoading] = useState(true);
   const [cars, setCars] = useState([]);
   let guy = window.sessionStorage.getItem("user");
   useEffect(() => {
-    axios.get("http://localhost:6900/list", { params: { guy } }).then((res) => {
+    axios.get("http://localhost:6900/wishlist", { params: { guy } }).then((res) => {
       setTimeout(() => {
         setLoading(false);
       }, 1500);
@@ -23,14 +23,14 @@ const List = () => {
     return <div className="loading">Loading...</div>;
   }
   let bye = (id) => {
-    axios.delete(`http://localhost:6900/list/${id}`).then((res) => {
+    axios.delete(`http://localhost:6900/wishlist/${id}`).then((res) => {
       window.location.reload();
       console.log(res);
     });
   };
   return (
     <div>
-      <h2 className="titleCar">Inventory</h2>
+      <h2 className="titleCar">Wish List</h2>
       <div className="Search">
         <input
           type="text"
@@ -53,7 +53,7 @@ const List = () => {
           placeholder="Search by Type..."
           className="typehere"
           onChange={(event) => {
-            setTypeTerm(event.target.value);
+            setPriceTerm(event.target.value);
           }}
         />
       </div>
@@ -76,10 +76,10 @@ const List = () => {
             }
           })
           .filter((val) => {
-            if (typeTerm === "") {
+            if (priceTerm === 0) {
               return val;
             } else if (
-              val.type.toLowerCase().includes(typeTerm.toLowerCase())
+              val.price.toString().includes(priceTerm.toString())
             ) {
               return val;
             }
@@ -87,12 +87,11 @@ const List = () => {
           .map((carList) => {
             return (
               <div key={carList.car_id} className={"car"}>
-                <button onClick={() => bye(carList.car_id)}>X</button>
+                <button onClick={() => bye(carList.wish_id)}>X</button>
                 <h3 className="divide">Name: {carList.name}</h3>
-                <h3 className="divide">Type: {carList.type}</h3>
                 <h3 className="divide">Year: {carList.year}</h3>
                 <h3 className="divide">Color: {carList.color}</h3>
-                <h3 className="divide">Quantity: {carList.quantity}</h3>
+                <h3 className="divide">Price: ${carList.price}</h3>
               </div>
             );
           })}
@@ -100,4 +99,4 @@ const List = () => {
     </div>
   );
 };
-export default List;
+export default WishLists;

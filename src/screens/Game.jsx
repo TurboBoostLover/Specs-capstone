@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Square } from "../components/Square"
-import "../styles/Game.css"
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Square } from "../components/Square";
+import "../styles/Game.css";
 const Game = () => {
   let isGameOver = false;
   let statusPlayer;
@@ -24,7 +24,7 @@ const Game = () => {
   const winner = calculateWinner(squares);
   winner
     ? (statusPlayer = winner)
-    : (statusPlayer = 'Player Turn: ' + (xTurn ? 'X' : 'O'));
+    : (statusPlayer = "Player Turn: " + (xTurn ? "X" : "O"));
 
   const gamePlay = (bool) => {
     if (bool) {
@@ -39,7 +39,7 @@ const Game = () => {
   const handleClick = (i) => {
     if (isGameOver || squares[i] !== null) return;
     let squaresCopy = [...squares];
-    squaresCopy[i] = xTurn ? 'X' : !computerPlay && 'O';
+    squaresCopy[i] = xTurn ? "X" : !computerPlay && "O";
     const newNumberOfTurnsLeft = numberOfTurnsLeft - 1;
     setNumberOfTurnsLeft(
       computerPlay ? xTurn && newNumberOfTurnsLeft : newNumberOfTurnsLeft
@@ -54,7 +54,7 @@ const Game = () => {
     let numberOfTurnsLeftCopy = numberOfTurnsLeft - 1;
     const randomIndex = Math.ceil(Math.random() * 9);
     if (squares[randomIndex] === null) {
-      squaresCopy[randomIndex] = 'O';
+      squaresCopy[randomIndex] = "O";
       setSquares(squaresCopy);
       setXTurn(true);
       setNumberOfTurnsLeft(numberOfTurnsLeftCopy);
@@ -75,15 +75,15 @@ const Game = () => {
         squares[a] === squares[c]
       ) {
         isGameOver = true;
-        gameStatus = 'Game Over!';
+        gameStatus = "Game Over!";
         return `The winner is: ${squares[a]}`;
       }
     }
 
     if (numberOfTurnsLeft === 0) {
       isGameOver = true;
-      gameStatus = 'Game Over!';
-      return 'Tie';
+      gameStatus = "Game Over!";
+      return "Tie";
     }
 
     return null;
@@ -95,7 +95,7 @@ const Game = () => {
     setNumberOfTurnsLeft(9);
     setXTurn(true);
     isGameOver = false;
-    gameStatus = 'Player Turn: X';
+    gameStatus = "Player Turn: X";
   };
 
   return (

@@ -3,6 +3,7 @@ import Welcome from "./screens/Welcome";
 import Home from "./screens/Home";
 import Signup from "./screens/Signup";
 import Game from "./screens/Game";
+import WishList from "./screens/WishList"
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/game" exact>
             <Game />
+          </Route>
+          <Route path="/wishlist" exact>
+            <WishList />
           </Route>
         </Switch>
       </main>

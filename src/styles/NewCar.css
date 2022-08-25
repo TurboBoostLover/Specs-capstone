@@ -1,47 +1,63 @@
 .main-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .inputForm {
-    font-family: sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    height:min-content;
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    background-color: blue;
-    padding:30px;
-    border-radius: 8%;
-    color:red;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: min-content;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background: linear-gradient(red, orange);
+  padding: 30px;
+  border-radius: 8%;
+  color: red;
 }
 
 .box1 {
-    justify-content: center;
-    align-items: center;
-    width: 12vw;
+  justify-content: center;
+  align-items: center;
+  width: 12vw;
 }
 
 h2 {
-    color: red;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+  color: red;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .titleCar {
-    font-size: xx-large;
-    background-color: black;
+  font-size: xx-large;
+  color: aqua;
 }
 
 .pushit {
-    width: 80%;
-    height: 40px;
+  width: 80%;
+  height: 40px;
+  animation: color-change 1s infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: red;
+  }
+  33% {
+    color: yellow;
+  }
+  66% {
+    color: orange;
+  }
+  100% {
+    color: blue;
+  }
 }
 
 input {
-    width: 100%;
+  width: 100%;
 }
