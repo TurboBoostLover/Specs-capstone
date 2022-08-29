@@ -15,19 +15,11 @@
   padding-top: 3px;
   padding-bottom: 3px;
   border-radius: 10px;
-  border-color: red;
+  border-color: aqua;
   animation-name: flash_border;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  -webkit-animation-name: flash_border;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-name: flash_border;
-  -moz-animation-duration: 2s;
-  -moz-animation-timing-function: linear;
-  -moz-animation-iteration-count: infinite;
 }
 
 .typehere {

@@ -9,19 +9,11 @@
   border-style: solid;
   padding-left: 20px;
   padding-right: 20px;
-  border-color: red;
+  border-color: aqua;
   animation-name: flash_border;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  -webkit-animation-name: flash_border;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-name: flash_border;
-  -moz-animation-duration: 2s;
-  -moz-animation-timing-function: linear;
-  -moz-animation-iteration-count: infinite;
 }
 
 @keyframes flash_border {
@@ -36,31 +28,6 @@
   }
 }
 
-@-webkit-keyframes flash_border {
-  0% {
-    border-color: red;
-  }
-  50% {
-    border-color: aqua;
-  }
-  100% {
-    border-color: red;
-  }
-}
-
-@-moz-keyframes flash_border {
-  0% {
-    border-color: red;
-  }
-  50% {
-    border-color: aqua;
-  }
-  100% {
-    border-color: red;
-  }
-}
-
-
 .contain {
   width: 70vw;
   margin: auto;
@@ -73,13 +40,21 @@
 .loading {
   display: flex;
   font-size: xx-large;
-  background-image: url("https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif");
+  background-image: url("https://cutewallpaper.org/24/animated-transparent-gif/gifs-for-grownups-colourverse.gif");
   background-repeat: no-repeat;
   justify-content: center;
-  height: 300px;
+  height: 400px;
   background-position: center;
+  
 }
 
 .divide {
   width: 20%;
+}
+
+.zoom {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: red;
 }

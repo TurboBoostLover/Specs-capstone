@@ -14,13 +14,13 @@ const List = () => {
     axios.get("http://localhost:6900/list", { params: { guy } }).then((res) => {
       setTimeout(() => {
         setLoading(false);
-      }, 1500);
+      }, 2000);
       setCars(res.data[0]);
     });
   }, []);
 
   if (isLoading) {
-    return <div className="loading">Loading...</div>;
+    return <div className="loading"><h5 className="zoom">Loading...</h5></div>;
   }
   let bye = (id) => {
     axios.delete(`http://localhost:6900/list/${id}`).then((res) => {

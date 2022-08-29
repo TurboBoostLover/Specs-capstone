@@ -1,11 +1,11 @@
 import WishLists from "../components/WishLists"
-import Footer from "../components/Footer";
+import Header from "../components/Header";
 import NewWish from "../components/NewWish";
 
 const WishList = () => {
   return (
     <div className="wishList">
-      <Footer />
+      <Header />
       <NewWish />
       <WishLists />
     </div>

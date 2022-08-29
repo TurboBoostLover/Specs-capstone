@@ -1,0 +1,241 @@
+.rain {
+  display: flex;
+  width: 100vw;
+  z-index: 5;
+  height: 1.5vh;
+}
+
+.red,
+.orange,
+.yellow,
+.green,
+.blue,
+.indigo,
+.violet {
+  width: 14.285%;
+  z-index: 5;
+}
+
+.red {
+  background-color: red;
+  animation: raindrop1 5s infinite;
+}
+
+.orange {
+  background-color: orange;
+  animation: raindrop2 5s infinite;
+}
+
+.yellow {
+  background-color: yellow;
+  animation: raindrop3 5s infinite;
+}
+
+.green {
+  background-color: green;
+  animation: raindrop4 5s infinite;
+}
+
+.blue {
+  background-color: blue;
+  animation: raindrop5 5s infinite;
+}
+
+.indigo {
+  background-color: indigo;
+  animation: raindrop6 5s infinite;
+}
+
+.violet {
+  background-color: violet;
+  animation: raindrop7 5s infinite;
+}
+
+@keyframes raindrop1 {
+  0% {
+    background-color: red;
+  }
+  14.285% {
+    background-color: orange;
+  }
+  28.57% {
+    background-color: yellow;
+  }
+  42.855% {
+    background-color: green;
+  }
+  57.14% {
+    background-color: blue;
+  }
+  71.425% {
+    background-color: indigo;
+  }
+  85.71% {
+    background-color: violet;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes raindrop2 {
+  0% {
+    background-color: orange;
+  }
+  14.285% {
+    background-color: yellow;
+  }
+  28.57% {
+    background-color: green;
+  }
+  42.855% {
+    background-color: blue;
+  }
+  57.14% {
+    background-color: indigo;
+  }
+  71.425% {
+    background-color: violet;
+  }
+  85.71% {
+    background-color: red;
+  }
+  100% {
+    background-color: orange;
+  }
+}
+
+@keyframes raindrop3 {
+  0% {
+    background-color: yellow;
+  }
+  14.285% {
+    background-color: green;
+  }
+  28.57% {
+    background-color: blue;
+  }
+  42.855% {
+    background-color: indigo;
+  }
+  57.14% {
+    background-color: violet;
+  }
+  71.425% {
+    background-color: red;
+  }
+  85.71% {
+    background-color: orange;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+@keyframes raindrop4 {
+  0% {
+    background-color: green;
+  }
+  14.285% {
+    background-color: blue;
+  }
+  28.57% {
+    background-color: indigo;
+  }
+  42.855% {
+    background-color: violet;
+  }
+  57.14% {
+    background-color: red;
+  }
+  71.425% {
+    background-color: orange;
+  }
+  85.71% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+@keyframes raindrop5 {
+  0% {
+    background-color: blue;
+  }
+  14.285% {
+    background-color: indigo;
+  }
+  28.57% {
+    background-color: violet;
+  }
+  42.855% {
+    background-color: red;
+  }
+  57.14% {
+    background-color: orange;
+  }
+  71.425% {
+    background-color: yellow;
+  }
+  85.71% {
+    background-color: green;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
+@keyframes raindrop6 {
+  0% {
+    background-color: indigo;
+  }
+  14.285% {
+    background-color: violet;
+  }
+  28.57% {
+    background-color: red;
+  }
+  42.855% {
+    background-color: orange;
+  }
+  57.14% {
+    background-color: yellow;
+  }
+  71.425% {
+    background-color: green;
+  }
+  85.71% {
+    background-color: blue;
+  }
+  100% {
+    background-color: indigo
+  }
+}
+
+@keyframes raindrop7 {
+  0% {
+    background-color: violet;
+  }
+  14.285% {
+    background-color: red;
+  }
+  28.57% {
+    background-color: orange;
+  }
+  42.855% {
+    background-color: yellow;
+  }
+  57.14% {
+    background-color: green;
+  }
+  71.425% {
+    background-color: blue
+  }
+  85.71% {
+    background-color: indigo;
+  }
+  100% {
+    background-color: violet;
+  }
+}

@@ -5,7 +5,9 @@
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 0;
-
+ flex-direction: row ;
+ justify-content: space-around;
+ flex-wrap: wrap;
 }
 
 .logout {
@@ -18,7 +20,8 @@
   border-style: solid;
   font-size: larger;
   border-radius: 10px;
-  animation: fourth 3s infinite;
+  animation: index 4s infinite;
+  color: red;
 }
 
 .gamefoot {
@@ -31,9 +34,8 @@
   border-style: solid;
   font-size: larger;
   border-radius: 10px;
-  margin-left: 15%;
-  animation: third 3s infinite;
-
+  animation: second 4s infinite;
+  color: red;
 }
 
 .footwish {
@@ -46,8 +48,8 @@
   border-style: solid;
   font-size: larger;
   border-radius: 10px;
-  margin-left: 15%;
-  animation: second 3s infinite;
+  animation: third 4s infinite;
+  color: red;
 }
 
 .foothome {
@@ -60,8 +62,8 @@
   border-style: solid;
   font-size: larger;
   border-radius: 10px;
-  margin-left: 15%;
-  animation: index 3s infinite;
+  animation: fourth 4s infinite;
+  color: red;
 }
 
 @keyframes index {

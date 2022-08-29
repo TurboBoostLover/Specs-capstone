@@ -1,12 +1,12 @@
 import NewCar from "../components/NewCar";
 import List from "../components/List";
 import "../styles/Home.css";
-import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const Home = () => {
   return (
     <div className="homescreen">
-      <Footer />
+      <Header />
       <NewCar />
       <List />
     </div>

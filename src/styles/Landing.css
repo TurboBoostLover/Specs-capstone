@@ -1,19 +1,22 @@
 .HotWheels {
   display: flex;
   justify-content: center;
-  margin: 1em 0 1em 0;
-  color: #ffaa00;
   font-weight: normal;
   font-family: "Ultra", sans-serif;
   font-size: 56px;
-  line-height: 22px;
-  text-transform: uppercase;
-  text-shadow: 0 2px rgb(255, 0, 0), 0 3px rgb(255, 0, 0);
-}
-
-body {
   background-color: lightslategray;
   height: 5vh;
+  padding: 2.5vh;
   margin: 0;
-  padding: 0;
+  color: aqua;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;;
+    letter-spacing: 2px;
 }
