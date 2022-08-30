@@ -6,17 +6,14 @@
   font-size: 56px;
   background-color: lightslategray;
   height: 5vh;
-  padding: 2.5vh;
+  padding: 2vh;
   margin: 0;
   color: aqua;
-  text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px #0fa,
-    0 0 82px #0fa,
-    0 0 92px #0fa,
-    0 0 102px #0fa,
-    0 0 151px #0fa;;
-    letter-spacing: 2px;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+  letter-spacing: 2px;
+}
+
+* {
+  cursor: url('https://ani.cursors-4u.net/cursors/images12/cur1103.gif') 35 30, auto;
 }

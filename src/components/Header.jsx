@@ -12,7 +12,7 @@ const Header = () => {
         Wish List
       </Link>
       <Link to="/game" className="gamefoot">
-        Game
+        Easter Egg
       </Link>
       <Link to="/" className="logout">
         Log Out

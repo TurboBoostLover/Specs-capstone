@@ -7,8 +7,8 @@
   border: 4px;
   border-bottom: 2px;
   border-style: solid;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 40px;
+  padding-right: 0px;
   border-color: aqua;
   animation-name: flash_border;
   animation-duration: 2s;
@@ -40,7 +40,8 @@
 .loading {
   display: flex;
   font-size: xx-large;
-  background-image: url("https://cutewallpaper.org/24/animated-transparent-gif/gifs-for-grownups-colourverse.gif");
+  /* background-image: url("https://cutewallpaper.org/24/animated-transparent-gif/gifs-for-grownups-colourverse.gif"); */
+  background-image: url("https://media2.giphy.com/media/eiq7tzfbIaTfRWhmw4/giphy.gif?cid=ecf05e47sohhqt14wsqx2h2dowl3wkp9yjzir29kird6yfjx&rid=giphy.gif&ct=s");
   background-repeat: no-repeat;
   justify-content: center;
   height: 400px;
@@ -57,4 +58,30 @@
   margin-top: auto;
   margin-bottom: auto;
   color: red;
+}
+
+.buttons {
+  position: relative;
+  right: 4%;
+  width: 0px;
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.buttonUp {
+  font-weight: bolder;
+  background-color: rgba(0, 0, 255, 0);
+  color: red;
+  border: none;
+  font-size: x-large;
+  z-index: 5;
+}
+
+.buttonDown {
+  font-weight: bolder;
+  background-color: rgba(0, 0, 255, 0);
+  color: red;
+  border: none;
+  font-size: x-large;
+  z-index: 5;
 }

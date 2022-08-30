@@ -13,6 +13,8 @@ const {
   wishlist,
   byewish,
   createNewWish,
+  addMore,
+  removeOne
 } = require("./dbcont.js");
 
 app.use(express());
@@ -30,6 +32,8 @@ app.delete("/list/:id", bye);
 app.get("/wishlist", wishlist)
 app.delete("/wishlist/:id", byewish);
 app.post("/newwish", createNewWish);
+app.put("/add/:id", addMore)
+app.put("/remove/:id", removeOne)
 
 //
 app.listen(port, () => {

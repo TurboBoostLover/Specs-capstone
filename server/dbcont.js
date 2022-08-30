@@ -82,7 +82,8 @@ VALUES (1, 'Corvette', 'American', 2022, 'Blue', 4);
       .query(
         `
     SELECT * FROM hotwheels
-    WHERE user_id='${guy}';
+    WHERE user_id='${guy}'
+    ORDER BY car_id ASC;
     `
       )
       .then((dbRes) => {
@@ -159,6 +160,34 @@ VALUES (1, 'Corvette', 'American', 2022, 'Blue', 4);
       .catch((err) => console.log(err));
   },
 
+  addMore: (req, res) => {
+    const id = req.params.id;
+    sequelize
+      .query(
+        `
+    UPDATE hotwheels SET quantity = quantity + 1 WHERE car_id=${id}
+    `
+      )
+      .then(() => {
+        res.sendStatus(200);
+      })
+      .catch((err) => console.log(err));
+  },
+
+  removeOne: (req, res) => {
+    const id = req.params.id;
+    sequelize
+      .query(
+        `
+    UPDATE hotwheels SET quantity = quantity - 1 WHERE car_id=${id}
+    `
+      )
+      .then(() => {
+        res.sendStatus(200);
+      })
+      .catch((err) => console.log(err));
+  },
+
   createNewWish: (req, res) => {
     const { user_id, name, year, color, price } = req.body;
     sequelize
@@ -172,5 +201,5 @@ VALUES (1, 'Corvette', 'American', 2022, 'Blue', 4);
         res.sendStatus(200);
       })
       .catch((err) => console.log(err));
-  }
+  },
 };

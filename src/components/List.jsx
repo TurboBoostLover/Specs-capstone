@@ -14,19 +14,41 @@ const List = () => {
     axios.get("http://localhost:6900/list", { params: { guy } }).then((res) => {
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 1500);
       setCars(res.data[0]);
     });
   }, []);
 
   if (isLoading) {
-    return <div className="loading"><h5 className="zoom">Loading...</h5></div>;
+    return (
+      <div className="loading">
+        <h5 className="zoom">Loading...</h5>
+      </div>
+    );
   }
   let bye = (id) => {
     axios.delete(`http://localhost:6900/list/${id}`).then((res) => {
       window.location.reload();
       console.log(res);
     });
+  };
+  let addOne = (id) => {
+    alert('added')
+    axios.put(`http://localhost:6900/add/${id}`).then((res) => {
+      window.location.reload();
+      console.log(res);
+    });
+  };
+  let remove = (carList) => {
+    if (carList.quantity > 1) {
+      let id2 = carList.car_id;
+      axios.put(`http://localhost:6900/remove/${id2}`).then((res) => {
+        window.location.reload();
+        console.log(res);
+      });
+    } else {
+      alert("Can't go below zero");
+    }
   };
   return (
     <div>
@@ -92,7 +114,22 @@ const List = () => {
                 <h3 className="divide">Type: {carList.type}</h3>
                 <h3 className="divide">Year: {carList.year}</h3>
                 <h3 className="divide">Color: {carList.color}</h3>
+
                 <h3 className="divide">Quantity: {carList.quantity}</h3>
+                <div className="buttons">
+                  <button
+                    onClick={() => addOne(carList.car_id)}
+                    className="buttonUp"
+                  >
+                    ⇧
+                  </button>
+                  <button
+                    onClick={() => remove(carList)}
+                    className="buttonDown"
+                  >
+                    ⇩
+                  </button>
+                </div>
               </div>
             );
           })}
