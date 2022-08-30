@@ -11,7 +11,7 @@ function Login() {
 
   // User Login info
   let database = [];
-  axios.get("https://specs-capstonef24.herokuapp.com/welcome").then((res) => {
+  axios.get("https://specs-capstonef24.herokuapp.com/arcticcat").then((res) => {
     database = res.data[0];
     //window session storage for user_id
 

@@ -27,7 +27,7 @@ app.use(express.static(path.resolve(__dirname, "../build")));
 
 app.post("/seed", seed);
 app.post("/newHotWheels", createNewHotWheels);
-app.get("/welcome", getPeople);
+app.get("/arcticcat", getPeople);
 app.get("/list", list);
 app.post("/signup", signUp);
 app.delete("/list/:id", bye);
