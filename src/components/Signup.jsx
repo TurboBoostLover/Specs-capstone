@@ -20,6 +20,7 @@ const Signup = () => {
         setUsername = "";
         setPassword = "";
         alert(`Added!`);
+        window.location.assign("http://www.hotwheelsdata.com/welcome")
       })
       .catch((err) => alert(err.response.data + " Username taken"));
   };
