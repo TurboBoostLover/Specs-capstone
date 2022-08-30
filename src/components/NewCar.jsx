@@ -23,7 +23,7 @@ const NewHotWheels = () => {
       quantity: quantity,
     };
 
-    axios.post("https://specs-capstonef24.herokuapp.com/newHotWheels", body).then(() => {
+    axios.post("/newHotWheels", body).then(() => {
       setName = "";
       setType = "";
       setYear = "";

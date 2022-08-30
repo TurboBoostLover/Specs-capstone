@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const port = process.env.PORT || 6900;
+const path = require("path");
+const PORT = process.env.PORT // || 6900;
 
 const {
   seed,
@@ -20,6 +21,7 @@ const {
 app.use(express());
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.resolve(__dirname, "../build")));
 
 //endpoints
 
@@ -35,7 +37,11 @@ app.post("/newwish", createNewWish);
 app.put("/add/:id", addMore)
 app.put("/remove/:id", removeOne)
 
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, '../build', 'index.html'));
+});
+
 //
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
 });

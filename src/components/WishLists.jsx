@@ -11,7 +11,7 @@ const WishLists = () => {
   const [cars, setCars] = useState([]);
   let guy = window.sessionStorage.getItem("user");
   useEffect(() => {
-    axios.get("https://specs-capstonef24.herokuapp.com/wishlist", { params: { guy } }).then((res) => {
+    axios.get("/wishlist", { params: { guy } }).then((res) => {
       setTimeout(() => {
         setLoading(false);
       }, 1500);
@@ -23,7 +23,7 @@ const WishLists = () => {
     return <div className="loading"><h5 className="zoom">Loading...</h5></div>;
   }
   let bye = (id) => {
-    axios.delete(`https://specs-capstonef24.herokuapp.com/wishlist/${id}`).then((res) => {
+    axios.delete(`/wishlist/${id}`).then((res) => {
       window.location.reload();
       console.log(res);
     });
