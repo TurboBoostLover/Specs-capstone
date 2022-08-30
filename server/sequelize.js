@@ -1,9 +1,8 @@
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
+const { DATABASE_URL } = process.env;
 
-const { CONNECTION_STRING } = process.env;
-
-const sequelize = new Sequelize(CONNECTION_STRING, {
+const sequelize = new Sequelize(DATABASE_URL, {
   dialect: "postgres",
   dialectOptions: {
     ssl: {
@@ -12,7 +11,7 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
   },
 });
 
-async function testConnection() {
+async function connect() {
   try {
     await sequelize.authenticate();
     console.log("Connection has been established successfully.");
