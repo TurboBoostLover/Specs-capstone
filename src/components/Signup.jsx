@@ -20,6 +20,7 @@ const Signup = () => {
         setUsername = "";
         setPassword = "";
         alert(`Added!`);
+        window.location.replace("www.google.com");
       })
       .catch((err) => alert(err.response.data + " Username taken"));
   };
