@@ -21,7 +21,7 @@ const NewWish = () => {
       price: price,
     };
 
-    axios.post("http://localhost:6900/newwish", body).then(() => {
+    axios.post("https://specs-capstonef24.herokuapp.com/newwish", body).then(() => {
       setName = "";
       setYear = "";
       setColor = "";

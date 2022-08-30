@@ -11,7 +11,7 @@ const List = () => {
   const [cars, setCars] = useState([]);
   let guy = window.sessionStorage.getItem("user");
   useEffect(() => {
-    axios.get("http://localhost:6900/list", { params: { guy } }).then((res) => {
+    axios.get("https://specs-capstonef24.herokuapp.com/list", { params: { guy } }).then((res) => {
       setTimeout(() => {
         setLoading(false);
       }, 1500);
@@ -27,14 +27,14 @@ const List = () => {
     );
   }
   let bye = (id) => {
-    axios.delete(`http://localhost:6900/list/${id}`).then((res) => {
+    axios.delete(`https://specs-capstonef24.herokuapp.com/list/${id}`).then((res) => {
       window.location.reload();
       console.log(res);
     });
   };
   let addOne = (id) => {
     alert('added')
-    axios.put(`http://localhost:6900/add/${id}`).then((res) => {
+    axios.put(`https://specs-capstonef24.herokuapp.com/add/${id}`).then((res) => {
       window.location.reload();
       console.log(res);
     });
@@ -42,7 +42,7 @@ const List = () => {
   let remove = (carList) => {
     if (carList.quantity > 1) {
       let id2 = carList.car_id;
-      axios.put(`http://localhost:6900/remove/${id2}`).then((res) => {
+      axios.put(`https://specs-capstonef24.herokuapp.com/remove/${id2}`).then((res) => {
         window.location.reload();
         console.log(res);
       });
