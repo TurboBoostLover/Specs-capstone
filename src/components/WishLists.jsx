@@ -11,7 +11,7 @@ const WishLists = () => {
   const [cars, setCars] = useState([]);
   let guy = window.sessionStorage.getItem("user");
   useEffect(() => {
-    axios.get("/wishlist", { params: { guy } }).then((res) => {
+    axios.get("https://specs-capstonef24.herokuapp.com/wishlist", { params: { guy } }).then((res) => {
       setTimeout(() => {
         setLoading(false);
       }, 1500);

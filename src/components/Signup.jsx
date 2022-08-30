@@ -15,7 +15,7 @@ const Signup = () => {
       password: password,
     };
     axios
-      .post("/signup", body)
+      .post("https://specs-capstonef24.herokuapp.com/signup", body)
       .then(() => {
         setUsername = "";
         setPassword = "";
