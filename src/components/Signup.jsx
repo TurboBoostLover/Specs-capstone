@@ -20,7 +20,7 @@ const Signup = () => {
         setUsername = "";
         setPassword = "";
         alert(`Added!`);
-        window.location.replace("www.google.com");
+        window.location.replace("http://localhost:7000/welcome");
       })
       .catch((err) => alert(err.response.data + " Username taken"));
   };
