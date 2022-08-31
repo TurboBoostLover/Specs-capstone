@@ -22,6 +22,7 @@
   border-radius: 10px;
   animation: index 4s infinite;
   color: red;
+  text-decoration: none;
 }
 
 .gamefoot {
@@ -36,6 +37,7 @@
   border-radius: 10px;
   animation: second 4s infinite;
   color: red;
+  text-decoration: none;
 }
 
 .footwish {
@@ -50,6 +52,7 @@
   border-radius: 10px;
   animation: third 4s infinite;
   color: red;
+  text-decoration: none;
 }
 
 .foothome {
@@ -64,6 +67,7 @@
   border-radius: 10px;
   animation: fourth 4s infinite;
   color: red;
+  text-decoration: none;
 }
 
 @keyframes index {
