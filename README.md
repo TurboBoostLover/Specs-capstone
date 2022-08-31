@@ -17,7 +17,7 @@ app.get('/*', function (req, res) {
 
 "start": "node ./server/index.js && npm build",
         
-        -Brady Bott
+       https://www.youtube.com/watch?v=5eJjnHnrCiw -Brady Bott
 
 
 These are some of the code you must have in order for Heroku to compile correctly. 
