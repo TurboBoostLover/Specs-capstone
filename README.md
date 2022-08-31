@@ -16,6 +16,7 @@ app.get('/*', function (req, res) {
 "main": "./server/index.js",
 
 "start": "node ./server/index.js && npm build",
+        
         -Brady Bott
 
 
