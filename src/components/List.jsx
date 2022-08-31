@@ -14,8 +14,7 @@ const List = () => {
     axios.get("http://localhost:6900/list", { params: { guy } }).then((res) => {
       setTimeout(() => {
         setLoading(false);
-      }, 1500);
-      setCars(res.data[0]);
+      }, 2500);      setCars(res.data[0]);
     });
   }, []);
 
