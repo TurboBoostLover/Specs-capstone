@@ -1,14 +1,22 @@
-Idea: A tracking app that keeps track of your hot wheel collection. To make shopping easier to be able to have your own profile with the cars you have so you don't end up with duplicates. 
+This branch is to only be deployed to Heroku. The package.json file is different
+along with the end points. 
 
-My MVP: 
- - User can login :Done
- - Has a database for indiviual users with their collection in them :Done
- - Be able to add new cars to their inventory and have a quantity :Done 
- - Will have the option to delete cars :Done
- - Seach through cars with title's of cars :Done
+The .env and server file variables are renamed to match what Heroku is looking for exactly. 
 
- After MVP 
- - User can search through by year :Done
- - User can search through by type (lowrider, jdm, american, European) :Done
- - User Can add a wishlist of cars they wish to get :Done
- 
+🔴These two lines of code go in your main server file:
+
+app.use(express.static(path.resolve(__dirname, "../build")));
+
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, '../build', 'index.html'));
+});
+
+🔴These two lines of code go in your package.json:
+
+"main": "./server/index.js",
+
+"start": "node ./server/index.js && npm build",
+        -Brady Bott
+
+
+These are some of the code you must have in order for Heroku to compile correctly. 
