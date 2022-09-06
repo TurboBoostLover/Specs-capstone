@@ -23,7 +23,7 @@ app.use(express.json());
 
 //endpoints
 
-app.post("/seed", seed);
+// app.post("/seed", seed);
 app.post("/newHotWheels", createNewHotWheels);
 app.get("/welcome", getPeople);
 app.get("/list", list);
