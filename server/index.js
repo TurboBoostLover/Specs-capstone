@@ -5,7 +5,7 @@ const path = require("path");
 const { PORT } = process.env;
 
 const {
-  seed,
+  // seed,
   createNewHotWheels,
   getPeople,
   list,
@@ -25,7 +25,7 @@ app.use(express.static(path.resolve(__dirname, "../build")));
 
 //endpoints
 
-app.post("/seed", seed);
+// app.post("/seed", seed);
 app.post("/newHotWheels", createNewHotWheels);
 app.get("/arcticcat", getPeople);
 app.get("/list", list);
